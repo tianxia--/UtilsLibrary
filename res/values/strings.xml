@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UtilsLibrary</string>
+    <string name="init_decoders">正在进行第一次解压解码包...</string>
+    <string name="video_layout_loading">正在缓冲...</string>
+    <!-- play -->
+    <string name="mediacontroller_play_pause">Play/Pause</string>
+    <string name="vitamio_theme_app_name">VPlayer codec</string>
+    <string name="VideoView_error_title">Cannot play video</string>
+    <string name="VideoView_error_text_invalid_progressive_playback">Sorry, this video is not valid for streaming to
+		this device.</string>
+    <string name="VideoView_error_text_unknown">对不起,这个视频不能播放。</string>
+    <string name="VideoView_error_button">OK</string>
+    <!-- readMoreView -->
+    <string name="read_more">read more</string>
+    <string name="read_less">read less</string>
+
+    
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <!-- 返回按钮 -->
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/vitamio_btn_play_back"
+            android:padding="15dp" />
+
+        <!-- 课程名字 -->
+
+        <TextView
+            android:id="@+id/mediacontroller_name"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+
+    <!-- 底部时间和控制 -->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="26dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="0.0dip"
+        android:layout_marginRight="0.0dip"
+        android:background="@drawable/vitamio_bg_mask" >
+
+        <!-- 已播放时长 -->
+
+        <TextView
+            android:id="@+id/mediacontroller_time_current"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginRight="2dp"
+            android:text="00:00:00"
+            android:textColor="#ffffff"
+            android:textSize="11sp" />
+
+        <!-- 斜线 -->
+
+        <TextView
+            android:id="@+id/tv_xiexian"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@+id/mediacontroller_time_current"
+            android:text="/"
+            android:textColor="#7e7e7e"
+            android:textSize="10dp" />
+
+        <!-- 视频时长 -->
+
+        <TextView
+            android:id="@+id/mediacontroller_time_total"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_xiexian"
+            android:text="99:99:99"
+            android:textColor="#7e7e7e"
+            android:textSize="11sp" />
+
+        <!-- 全屏按钮 -->
+
+        <ImageButton
+            android:id="@+id/mediacontroller_fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:contentDescription="@string/mediacontroller_play_pause"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/vitamio_bg_full_screen_btn" />
+
+        <!-- 进度条 -->
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/mediacontroller_fill"
+            android:layout_toRightOf="@+id/mediacontroller_time_total" >
+
+            <SeekBar
+                android:id="@+id/mediacontroller_seekbar"
+                style="@style/MediaController_SeekBar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:focusable="true"
+                android:max="1000" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="19dp" >
+
+        <!-- 暂停按钮 -->
+
+        <ImageView
+            android:id="@+id/ib_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="19dp"
+            android:src="@drawable/vitamio_ib_play" />
+    </RelativeLayout>
+
+</RelativeLayout>
